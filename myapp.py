@@ -16,7 +16,7 @@ def get_data(id = None):
 
 def post_data():
     data ={
-        'name': 'suraj',
+        'name': 'ssuraj',
         'roll': 10,
         'city': 'itahari'
     }
@@ -25,7 +25,6 @@ def post_data():
     r = requests.post(url = URL, data =json_data)    
     data = r.json()
     print(data)
-    
 post_data() #for write
 
 

@@ -4,7 +4,7 @@ from .models import Student
 class StudentSerializer(serializers.ModelSerializer):
      #validators
     def start_with_s(value):
-        if value[0].lower() != 'r':
+        if value[0].lower() != 's':
             raise serializers.ValidationError('Name should be start with s')
    
     name = serializers.CharField(validators=[start_with_s])
@@ -12,8 +12,9 @@ class StudentSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Student
-        fields = ['name', 'roll', 'city', 'state']
+        fields = ['name', 'roll', 'city']
         
+
     
     #Field level validation
     def validate_roll(self, value):
